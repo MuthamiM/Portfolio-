@@ -46,7 +46,7 @@ const Experience = () => {
           </div>
           <OpenSourceSummary />
           <Link
-            href="https://github.com/MusaMuthami1"
+            href="https://github.com/MuthamiM"
             target="_blank"
             rel="noopener noreferrer"
             className="underline flex items-center gap-1 text-xs md:text-sm font-medium pt-2 md:pt-4 mt-2 md:mt-4 border-t border-current border-opacity-20 pb-2 md:pb-4 mb-2 md:mb-4 border-b"

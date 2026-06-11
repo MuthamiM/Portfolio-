@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Musa Mwange",
-      url: "https://github.com/MusaMuthami1",
+      url: "https://github.com/MuthamiM",
     },
   ],
   creator: "Musa Mwange",

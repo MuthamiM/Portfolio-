@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect, useState, useRef } from "react";
 import Background from "@/components/Background";
 import Controller from "@/components/Controller";
 import ControllerHeader from "@/components/Controller/ControllerHeader";
@@ -10,9 +11,9 @@ import Socials from "@/components/Main/Socials";
 import Loading from "@/components/Loading";
 import { ThemeSelector } from "@/components/Theme/theme-selector";
 import { useTheme } from "next-themes";
-import { useEffect, useState, useRef } from "react";
 import Experience from "@/components/Main/Experience";
 import Link from "next/link";
+import NewsBanner from "@/components/NewsBanner";
 
 const VALID_SECTIONS = new Set(["meet-me", "skills", "my-work", "socials"]);
 
@@ -26,6 +27,7 @@ const SECTION_ID_MAP: Record<string, string> = {
 export default function Page() {
   const [showLoading, setShowLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [isNewsVisible, setIsNewsVisible] = useState(true);
   const [activeSection, setActiveSection] = useState<
     "meet-me" | "skills" | "my-work" | "socials"
   >("meet-me");
@@ -102,12 +104,16 @@ export default function Page() {
   }
 
   const borderClass = theme === "dark" ? "border-white/80" : "border-black";
+  const topPaddingClass = isNewsVisible 
+    ? "pt-16 md:pt-20 xl:pt-22 2xl:pt-24" 
+    : "pt-5 md:pt-10 xl:pt-12 2xl:pt-15";
 
   return (
     <div
-      className={`h-screen animate-blur-in pt-5 pr-3 pl-3 pb-3 md:pt-10 md:pr-10 md:pl-5 md:pb-5 xl:pt-12 xl:pr-12 xl:pl-7 xl:pb-7 2xl:pt-15 2xl:pr-15 2xl:pl-10 2xl:pb-10`}
+      className={`h-screen animate-blur-in ${topPaddingClass} pr-3 pl-3 pb-3 md:pr-10 md:pl-5 md:pb-5 xl:pr-12 xl:pl-7 xl:pb-7 2xl:pr-15 2xl:pl-10 2xl:pb-10`}
       suppressHydrationWarning
     >
+      <NewsBanner onVisibilityChange={setIsNewsVisible} />
       <div className="flex flex-col items-end w-full h-full" suppressHydrationWarning>
         <div className="flex w-full h-full items-end">
           <div

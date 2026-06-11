@@ -69,8 +69,32 @@ const Projects = () => {
   };
 
   const getImageLabel = (path: string, index: number) => {
+    // Shared / Generic labels
+    if (path.includes("login")) return "Login Page";
     if (path.includes("admin")) return "Admin Dashboard";
     if (path.includes("student")) return "Student Dashboard";
+    
+    // VOO app specific labels
+    if (path.includes("voo-home")) return "Home Dashboard";
+    if (path.includes("voo-report")) return "Report Issue";
+    if (path.includes("voo-services")) return "Services";
+    if (path.includes("voo-citizen")) return "Citizen Hub";
+    
+    // KOMIUT specific labels
+    if (path.includes("komiut-home")) return "Home Dashboard";
+    if (path.includes("komiut-payments")) return "Payments Page";
+    if (path.includes("komiut.png")) return "Booking Flow";
+    
+    // NextBlog & EZRAlms specific labels
+    if (path.includes("nextblog-home")) return "Home Page";
+    if (path.includes("nextblog-blog")) return "Blog Feed";
+    if (path.includes("ezralms-dashboard")) return "Loans Dashboard";
+    
+    // Fallback labels based on containing words
+    if (path.includes("home")) return "Home Screen";
+    if (path.includes("blog")) return "Blog Feed";
+    if (path.includes("dashboard")) return "Dashboard";
+    
     return `View ${index + 1}`;
   };
 
@@ -113,12 +137,14 @@ const Projects = () => {
                 }}
               >
                 {/* Project Image */}
-                <div className="relative w-full aspect-[16/10] overflow-hidden">
+                <div className={`relative w-full aspect-[16/10] overflow-hidden ${
+                  theme === "dark" ? "bg-zinc-900" : "bg-zinc-100"
+                }`}>
                   <Image
                     src={currentImage}
                     alt={`${project.name} preview`}
                     fill
-                    className={`object-cover transition-transform duration-700 ease-out ${
+                    className={`object-contain transition-transform duration-700 ease-out ${
                       hoveredIndex === index ? "scale-105" : "scale-100"
                     }`}
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -127,8 +153,8 @@ const Projects = () => {
                   <div
                     className={`absolute inset-0 transition-opacity duration-500 ${
                       theme === "dark"
-                        ? "bg-gradient-to-t from-black/85 via-black/20 to-transparent"
-                        : "bg-gradient-to-t from-white/85 via-white/20 to-transparent"
+                        ? "bg-gradient-to-t from-black/80 via-transparent to-transparent"
+                        : "bg-gradient-to-t from-white/80 via-transparent to-transparent"
                     }`}
                   />
                   {/* Status badge */}
@@ -226,7 +252,7 @@ const Projects = () => {
         </div>
 
         <Link
-          href="https://github.com/MusaMuthami1"
+          href="https://github.com/MuthamiM"
           target="_blank"
           rel="noopener noreferrer"
         >

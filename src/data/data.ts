@@ -11,8 +11,8 @@ export const socials = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/MusaMuthami1",
-    handle: "/MusaMuthami1",
+    url: "https://github.com/MuthamiM",
+    handle: "/MuthamiM",
   },
   {
     name: "LeetCode",
@@ -72,7 +72,7 @@ export const projects = [
     name: "Kyamatu SMS",
     tech: "Next.js • TypeScript • Tailwind",
     desc: "School Management System (SMS) featuring interactive Student and Super Admin dashboards for tracking GPA, attendance, timetables, fee statements, admissions, and school-wide analytics.",
-    link: "https://github.com/MusaMuthami1",
+    link: "https://github.com/MuthamiM",
     liveLink: "https://kyamatu-frontend.pages.dev/dashboard",
     images: [
       "/images/projects/kyamatu-admin.png",
@@ -84,52 +84,77 @@ export const projects = [
     name: "Karibu Inc",
     tech: "Next.js • TypeScript • Node.js",
     desc: "Enterprise business management system with analytics dashboard, user management, and real-time data insights",
-    link: "https://github.com/MusaMuthami1",
+    link: "https://github.com/MuthamiM",
     liveLink: "#",
     images: ["/images/projects/karibu-inc.png"],
     status: "In Development" as const,
   },
   {
-    name: "SecureVault",
-    tech: "MERN Stack • MongoDB • Cryptography",
-    desc: "A secure password management system implementing client-side encryption and zero-knowledge architecture",
-    link: "https://github.com/MusaMuthami1",
-    liveLink: "#",
-    images: ["/images/projects/securevault.png"],
+    name: "NextBlog",
+    tech: "Next.js • TypeScript • Tailwind",
+    desc: "A modern, responsive blog platform featuring search, categorization, reading time estimation, and a rich content presentation interface.",
+    link: "https://github.com/MuthamiM",
+    liveLink: "https://blog-p3lg.vercel.app",
+    images: [
+      "/images/projects/nextblog-home.png",
+      "/images/projects/nextblog-blog.png",
+    ],
+    status: "Live" as const,
+  },
+  {
+    name: "EZRAlms",
+    tech: "React • TypeScript • Tailwind",
+    desc: "Library Management System (LMS) with member authentication, library loan tracking, book inventory management, and a clean library loans dashboard.",
+    link: "https://github.com/MuthamiM",
+    liveLink: "https://ezralms-api.musamwange2.workers.dev",
+    images: [
+      "/images/projects/ezralms-login.png",
+      "/images/projects/ezralms-dashboard.png",
+    ],
     status: "Released" as const,
   },
   {
     name: "KOMIUT",
     tech: "Flutter • Dart • M-Pesa API",
     desc: "Transport booking app with M-Pesa & card payments",
-    link: "https://github.com/MusaMuthami1/KOMIUT",
-    liveLink: "https://github.com/MusaMuthami1/KOMIUT/releases",
-    images: ["/images/projects/komiut.png"],
+    link: "https://github.com/MuthamiM/KOMIUT",
+    liveLink: "https://github.com/MuthamiM/KOMIUT/releases",
+    images: [
+      "/images/projects/komiut-login.png",
+      "/images/projects/komiut-home.png",
+      "/images/projects/komiut-payments.png",
+      "/images/projects/komiut.png",
+    ],
     status: "Released" as const,
   },
   {
     name: "VOO Citizen App",
     tech: "Flutter • Dart • Supabase",
     desc: "Citizen engagement app with email OTP verification",
-    link: "https://github.com/MusaMuthami1/voo-citizen-app",
-    liveLink: "https://github.com/MusaMuthami1/voo-citizen-app/releases",
-    images: ["/images/projects/voo-citizen.png"],
+    link: "https://github.com/MuthamiM/voo-citizen-app",
+    liveLink: "https://github.com/MuthamiM/voo-citizen-app/releases",
+    images: [
+      "/images/projects/voo-home.png",
+      "/images/projects/voo-report.png",
+      "/images/projects/voo-services.png",
+      "/images/projects/voo-citizen.png",
+    ],
     status: "Released" as const,
   },
   {
     name: "USSD Dashboard",
     tech: "Next.js • TypeScript • Node.js",
     desc: "Dashboard for managing USSD services and analytics",
-    link: "https://github.com/MusaMuthami1",
+    link: "https://github.com/MuthamiM",
     liveLink: "#",
     images: ["/images/projects/ussd-dashboard.png"],
     status: "In Development" as const,
   },
   {
-    name: "Portfolio Website",
+    name: "This Site",
     tech: "Next.js • TypeScript • Tailwind",
-    desc: "Personal portfolio showcasing my work, cybersecurity projects, and skills",
-    link: "https://github.com/MusaMuthami1/MusaMuthami1.github.io",
+    desc: "This site: personal portfolio showcasing my work, cybersecurity projects, and skills",
+    link: "https://github.com/MuthamiM/Portfolio-",
     liveLink: "https://musamuthami1-github-io.pages.dev",
     images: ["/images/projects/portfolio.png"],
     status: "Live" as const,
@@ -142,7 +167,7 @@ export const repos = [
     prs: [
       {
         title: "School Management System frontend with Next.js",
-        url: "https://github.com/MusaMuthami1",
+        url: "https://github.com/MuthamiM",
       },
     ],
   },
@@ -151,16 +176,25 @@ export const repos = [
     prs: [
       {
         title: "Enterprise management system with analytics",
-        url: "https://github.com/MusaMuthami1",
+        url: "https://github.com/MuthamiM",
       },
     ],
   },
   {
-    name: "SecureVault",
+    name: "NextBlog",
     prs: [
       {
-        title: "Secure password management system",
-        url: "https://github.com/MusaMuthami1",
+        title: "Modern Next.js blog with categorization and search",
+        url: "https://github.com/MuthamiM",
+      },
+    ],
+  },
+  {
+    name: "EZRAlms",
+    prs: [
+      {
+        title: "Library Management System for tracking book loans",
+        url: "https://github.com/MuthamiM",
       },
     ],
   },
@@ -169,7 +203,7 @@ export const repos = [
     prs: [
       {
         title: "Transport booking with M-Pesa integration",
-        url: "https://github.com/MusaMuthami1/KOMIUT",
+        url: "https://github.com/MuthamiM/KOMIUT",
       },
     ],
   },
@@ -178,7 +212,7 @@ export const repos = [
     prs: [
       {
         title: "Citizen engagement with email OTP",
-        url: "https://github.com/MusaMuthami1/voo-citizen-app",
+        url: "https://github.com/MuthamiM/voo-citizen-app",
       },
     ],
   },
@@ -187,16 +221,16 @@ export const repos = [
     prs: [
       {
         title: "USSD services management dashboard",
-        url: "https://github.com/MusaMuthami1",
+        url: "https://github.com/MuthamiM",
       },
     ],
   },
   {
-    name: "Portfolio Website",
+    name: "This Site",
     prs: [
       {
         title: "Personal portfolio with Next.js",
-        url: "https://github.com/MusaMuthami1/MusaMuthami1.github.io",
+        url: "https://github.com/MuthamiM/Portfolio-",
       },
     ],
   },

@@ -52,7 +52,7 @@ const ControllerHeader = () => {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/MusaMuthami1"
+            href="https://github.com/MuthamiM"
             className="cursor-pointer"
           >
             <FiGithub
