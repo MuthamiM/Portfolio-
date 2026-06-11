@@ -26,22 +26,10 @@ const Experience = () => {
         <div className="w-full pt-2 md:pt-4 mt-2 md:mt-4 border-t border-current border-opacity-20 mb-0">
           <div className="text-left">
             <h3 className="text-lg md:text-2xl font-semibold">
-              Software Developer
+              Cybersecurity & Web Development
             </h3>
             <p className="text-[11px] sm:text-sm font-medium flex items-center justify-between">
-              <span className="cursor-pointer">SafeTek Solutions</span>{" "}
-              <span>2024 to present</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="w-full pt-2 md:pt-4 mt-2 md:mt-4 border-t border-current border-opacity-20 mb-0">
-          <div className="text-left">
-            <h3 className="text-lg md:text-2xl font-semibold">
-              Software Development
-            </h3>
-            <p className="text-[11px] sm:text-sm font-medium flex items-center justify-between">
-              <span className="cursor-pointer">Freelance | Building Apps</span>{" "}
+              <span className="cursor-pointer">Freelance | Building Projects</span>{" "}
               <span>2023 to present</span>
             </p>
           </div>
@@ -58,7 +46,7 @@ const Experience = () => {
           </div>
           <OpenSourceSummary />
           <Link
-            href="https://github.com/MuthamiM"
+            href="https://github.com/MusaMuthami1"
             target="_blank"
             rel="noopener noreferrer"
             className="underline flex items-center gap-1 text-xs md:text-sm font-medium pt-2 md:pt-4 mt-2 md:mt-4 border-t border-current border-opacity-20 pb-2 md:pb-4 mb-2 md:mb-4 border-b"
@@ -154,14 +142,18 @@ function OpenSourceSummary() {
                     style={{ transitionDelay: `${pIdx * 40}ms` }}
                   >
                     <PiGitMergeDuotone className="h-4 w-4" />
-                    <Link
-                      href={pr.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline text-xs"
-                    >
-                      {pr.title}
-                    </Link>
+                    {pr.url === "#" ? (
+                      <span className="text-xs">{pr.title}</span>
+                    ) : (
+                      <Link
+                        href={pr.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-xs"
+                      >
+                        {pr.title}
+                      </Link>
+                    )}
                   </div>
                 ))}
               </div>

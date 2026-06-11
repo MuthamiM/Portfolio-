@@ -38,14 +38,15 @@ const thasadith = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://musamuthami.dev"),
-  title: "Musa Muthami | Software Developer Portfolio",
-  description: "Hey! I'm Musa Muthami, Software Developer at SafeTek Solutions",
+  metadataBase: new URL("https://musamuthami1-github-io.pages.dev"),
+  title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer",
+  description: "Hey! I'm Musa Mwange, Cybersecurity Specialist & Frontend Developer Portfolio",
   keywords: [
-    "Musa Muthami",
-    "Software Developer",
-    "Flutter Developer",
-    "Mobile App Developer",
+    "Musa Mwange",
+    "Cybersecurity Specialist",
+    "Frontend Developer",
+    "Penetration Testing",
+    "Vulnerability Assessment",
     "React Developer",
     "Next.js Developer",
     "USSD Development",
@@ -55,29 +56,28 @@ export const metadata: Metadata = {
     "Swift",
     "Web Developer",
     "Portfolio",
-    "SafeTek Solutions",
     "M-Pesa Integration",
   ],
   authors: [
     {
-      name: "Musa Muthami",
-      url: "https://github.com/MuthamiM",
+      name: "Musa Mwange",
+      url: "https://github.com/MusaMuthami1",
     },
   ],
-  creator: "Musa Muthami",
-  publisher: "Musa Muthami",
+  creator: "Musa Mwange",
+  publisher: "Musa Mwange",
 
   openGraph: {
-    title: "Musa Muthami | Software Developer Portfolio",
-    description: "Musa Muthami - Software Developer at SafeTek Solutions",
-    url: "https://musamuthami.dev",
-    siteName: "Musa Muthami",
+    title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer Portfolio",
+    description: "Musa Mwange - Cybersecurity Specialist & Frontend Developer",
+    url: "https://musamuthami1-github-io.pages.dev",
+    siteName: "Musa Mwange",
     images: [
       {
-        url: "https://musamuthami.dev/images/profile.JPG",
+        url: "https://musamuthami1-github-io.pages.dev/images/profile.JPG",
         width: 1200,
         height: 630,
-        alt: "Musa Muthami Portfolio",
+        alt: "Musa Mwange Portfolio",
       },
     ],
     locale: "en_US",
@@ -86,9 +86,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Musa Muthami | Software Developer Portfolio",
-    description: "Musa Muthami - Software Developer at SafeTek Solutions",
-    images: ["https://musamuthami.dev/images/profile.JPG"],
+    title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer Portfolio",
+    description: "Musa Mwange - Cybersecurity Specialist & Frontend Developer",
+    images: ["https://musamuthami1-github-io.pages.dev/images/profile.JPG"],
     creator: "@SkiNnyWallk",
   },
 

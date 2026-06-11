@@ -1,8 +1,8 @@
-# Musa Muthami - Portfolio
+# Musa Mwange - Portfolio
 
-Hi, I'm Musa Muthami, a passionate Web Developer. I create beautiful, responsive applications with clean code and elegant user experiences.
+Hi, I'm Musa Mwange, a passionate Cybersecurity Specialist & Frontend Developer. I create secure, beautiful, responsive applications with clean code and elegant user experiences.
 
- **Visit my portfolio:** [https://musamuthami.dev/](https://musamuthami.dev/)
+ **Visit my portfolio:** [https://musamuthami1-github-io.pages.dev/](https://musamuthami1-github-io.pages.dev/)
 
 ## About This Portfolio
 
@@ -19,11 +19,11 @@ Built with TypeScript, Tailwind CSS, and next-themes for an elegant dark/light m
 
 ## Features
 
-Responsive design
-Dark/Light theme switching
-Fast and optimized performance
-Clean and modern UI
+- Responsive design
+- Dark/Light theme switching
+- Fast and optimized performance
+- Clean and modern UI
 
 ---
 
-© 2026 Musa Muthami. All rights reserved.
+© 2026 Musa Mwange. All rights reserved.
