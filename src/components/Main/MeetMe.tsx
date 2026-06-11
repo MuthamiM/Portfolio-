@@ -27,11 +27,11 @@ const MeetMe = () => {
   return (
     <section
       id="meet-me"
-      className="flex items-center justify-center h-full w-full overflow-auto"
+      className="flex items-center justify-center min-h-full w-full py-8 md:py-10"
       suppressHydrationWarning
     >
       <div
-        className="w-full h-full mx-auto max-w-4xl p-2.5 pl-4 md:p-10 flex items-center md:justify-center"
+        className="w-full min-h-full mx-auto max-w-4xl p-2.5 pl-4 md:p-10 flex items-center md:justify-center"
         suppressHydrationWarning
       >
         <div className="space-y-10 md:space-y-14">
@@ -42,21 +42,18 @@ const MeetMe = () => {
             </h2>
             <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto">
               Hi! I&apos;m{" "}
-              <span className={getHighlightClass()}>Musa Mwange</span>, a{" "}
+              <span className={getHighlightClass()}>Musa Muthami</span>, a{" "}
               <span className={getHighlightClass()}>
-                Cybersecurity Specialist & Frontend Developer
+                Software Developer & Cybersecurity Enthusiast
               </span>
-              . I bridge the gap between secure technology and exceptional user experiences. I specialize in{" "}
-              <span className={getHighlightClass()}>
-                penetration testing
-              </span>
-              ,{" "}
-              <span className={getHighlightClass()}>
-                vulnerability assessment
-              </span>
-              , and building secure full-stack applications with{" "}
-              <span className={getHighlightClass()}>Next.js</span> and{" "}
-              <span className={getHighlightClass()}>Flutter</span>. I create apps that deliver excellent performance while keeping user data protected.
+              . I am a final-year Information Technology graduate from{" "}
+              <span className={getHighlightClass()}>KCA University, Nairobi</span>, specialising in cybersecurity and full-stack software development.
+            </p>
+            <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto mt-4">
+              I have hands-on experience designing and building production-grade{" "}
+              <span className={getHighlightClass()}>distributed systems</span>,{" "}
+              <span className={getHighlightClass()}>mobile applications</span>, and AI-integrated tools. I actively contribute to Kenya&apos;s developer ecosystem, with direct experience integrating the{" "}
+              <span className={getHighlightClass()}>M-Pesa Daraja API</span>, building post-quantum cryptographic applications, and architecting financial microservices. I am committed to developing open-source, locally relevant technology that advances digital financial inclusion across East Africa.
             </p>
           </div>
 
@@ -92,9 +89,9 @@ const MeetMe = () => {
             <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto">
               I&apos;m available for{" "}
               <span className={getHighlightClass()}>
-                cybersecurity consulting, frontend engineering, and full-stack development roles
+                full-stack software engineering, cybersecurity consulting, and distributed systems development roles
               </span>
-              . If you need a security-minded developer to secure your existing system or build a robust application from scratch — let&apos;s build together.
+              . If you need a developer with strong security engineering expertise to build robust, secure, and production-grade applications from scratch — let&apos;s build together.
             </p>
             <div className="flex items-center justify-center gap-3 mt-5">
               <Link

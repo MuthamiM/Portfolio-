@@ -110,7 +110,7 @@ export default function Page() {
 
   return (
     <div
-      className={`h-screen animate-blur-in ${topPaddingClass} pr-3 pl-3 pb-3 md:pr-10 md:pl-5 md:pb-5 xl:pr-12 xl:pl-7 xl:pb-7 2xl:pr-15 2xl:pl-10 2xl:pb-10`}
+      className={`h-[100dvh] animate-blur-in ${topPaddingClass} pr-3 pl-3 pb-3 md:pr-10 md:pl-5 md:pb-5 xl:pr-12 xl:pl-7 xl:pb-7 2xl:pr-15 2xl:pl-10 2xl:pb-10`}
       suppressHydrationWarning
     >
       <NewsBanner onVisibilityChange={setIsNewsVisible} />
@@ -122,13 +122,13 @@ export default function Page() {
             <ThemeSelector />
           </div>
 
-          <div className="w-full h-full flex flex-col md:flex-row items-end gap-3">
-            <div className="w-full h-auto md:w-[23%] 2xl:w-[20%] md:min-w-60 flex flex-col gap-2 items-end">
+          <div className="w-full h-full flex flex-col md:flex-row items-stretch md:items-end gap-3">
+            <div className="w-full h-auto md:w-[23%] 2xl:w-[20%] md:min-w-60 flex flex-col gap-2 items-stretch md:items-end">
               <div className="w-full hidden md:flex items-end ">
                 <ControllerHeader />
               </div>
               <div
-                className={`w-full h-full md:w-full  2xl:min-h-auto border-[0.095rem] rounded-t-2xl ${borderClass} flex md:flex-col`}
+                className={`w-full h-auto md:h-full md:w-full 2xl:min-h-auto border-[0.095rem] rounded-t-2xl ${borderClass} flex md:flex-col`}
               >
                 <Controller
                   activeSection={activeSection}
@@ -138,7 +138,7 @@ export default function Page() {
             </div>
 
             <div
-              className={`w-full h-full border-[0.095rem] flex relative rounded-b-2xl  md:rounded-b-none overflow-hidden ${borderClass}`}
+              className={`w-full flex-1 min-h-0 md:h-full border-[0.095rem] flex relative rounded-b-2xl md:rounded-b-none overflow-hidden ${borderClass}`}
             >
               <Background />
 
@@ -175,7 +175,7 @@ export default function Page() {
         </div>
 
         <div className="w-50 h-5 flex justify-end">
-          <p className="text-xs opacity-80 pr-2 pt-0.5">© Musa Mwange</p>
+          <p className="text-xs opacity-80 pr-2 pt-0.5">© Musa Muthami</p>
         </div>
       </div>
     </div>

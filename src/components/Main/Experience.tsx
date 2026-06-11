@@ -13,7 +13,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center justify-center h-full w-full p-2.5 pl-4 md:p-8"
+      className="flex flex-col items-center justify-center min-h-full w-full py-8 md:py-12 p-2.5 pl-4 md:p-8"
       suppressHydrationWarning
     >
       <div className="w-full mx-auto max-w-3xl text-center" suppressHydrationWarning>
@@ -23,15 +23,58 @@ const Experience = () => {
           </h2>
         </div>
 
+        {/* Professional Experience Section */}
         <div className="w-full pt-2 md:pt-4 mt-2 md:mt-4 border-t border-current border-opacity-20 mb-0">
-          <div className="text-left">
-            <h3 className="text-lg md:text-2xl font-semibold">
-              Cybersecurity & Web Development
-            </h3>
-            <p className="text-[11px] sm:text-sm font-medium flex items-center justify-between">
-              <span className="cursor-pointer">Freelance | Building Projects</span>{" "}
-              <span>2023 to present</span>
-            </p>
+          <h3 className="text-2xl md:text-[28px] font-semibold tracking-wide text-left mb-4">
+            Professional Experience
+          </h3>
+          <div className="space-y-6 text-left">
+            {/* ZeTheta */}
+            <div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h4 className="text-lg font-bold">Software Developer</h4>
+                <span className="text-xs sm:text-sm opacity-80">2025 – Present</span>
+              </div>
+              <p className="text-sm font-medium opacity-90">ZeTheta &middot; Nairobi, Kenya</p>
+              <ul className="list-disc list-inside mt-2 text-xs sm:text-sm opacity-85 space-y-1 pl-1">
+                <li>Architecting a production Open Banking API Gateway unifying Kenya&apos;s mobile money providers (M-Pesa Daraja, Airtel Money) with a unified REST/GraphQL interface and developer sandbox</li>
+                <li>Building a Real-Time Fraud Detection Microservices Engine using Apache Kafka, FastAPI, and gradient-boosted ML models tuned to East African mobile money transaction patterns</li>
+                <li>Developed a secure offline healthcare application utilizing CRYSTALS-Kyber post-quantum cryptography to secure patient health reports, with the working prototype submitted to the MidNight Hackers 2026 hackathon</li>
+              </ul>
+            </div>
+
+            {/* The Virtual CTO */}
+            <div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <h4 className="text-lg font-bold">Software Developer (Part-Time Internship)</h4>
+                <span className="text-xs sm:text-sm opacity-80">2024 – 2025</span>
+              </div>
+              <p className="text-sm font-medium opacity-90">The Virtual CTO &middot; Remote / India</p>
+              <ul className="list-disc list-inside mt-2 text-xs sm:text-sm opacity-85 space-y-1 pl-1">
+                <li>Developed and maintained front-end features for SaaS client platforms using React.js and Next.js</li>
+                <li>Implemented responsive UI components, API integrations, and performance optimisations</li>
+                <li>Collaborated asynchronously with international engineering team across multiple time zones</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="w-full pt-4 md:pt-6 mt-6 md:mt-8 border-t border-current border-opacity-20 text-left">
+          <h3 className="text-2xl md:text-[28px] font-semibold tracking-wide mb-4">
+            Education
+          </h3>
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+              <h4 className="text-lg font-bold">Bachelor of Science — Information Technology</h4>
+              <span className="text-xs sm:text-sm opacity-80">2022 – 2026 (Expected)</span>
+            </div>
+            <p className="text-sm font-medium opacity-90">KCA University &middot; Nairobi, Kenya</p>
+            <ul className="list-disc list-inside mt-2 text-xs sm:text-sm opacity-85 space-y-1 pl-1">
+              <li>Dual specialisation: Cybersecurity and Full-Stack Software Development</li>
+              <li>Relevant coursework: Distributed Systems, Network Security, Data Structures &amp; Algorithms, Database Systems, Software Engineering, AI &amp; Machine Learning</li>
+              <li>Active member of the KCA University Developer Community</li>
+            </ul>
           </div>
         </div>
 

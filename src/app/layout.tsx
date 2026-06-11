@@ -39,12 +39,14 @@ const thasadith = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://musamuthami1-github-io.pages.dev"),
-  title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer",
-  description: "Hey! I'm Musa Mwange, Cybersecurity Specialist & Frontend Developer Portfolio",
+  title: "Musa Muthami | Software Developer & Cybersecurity Enthusiast",
+  description: "Hey! I'm Musa Muthami — Software Developer & Cybersecurity Enthusiast building secure, production-grade systems in Nairobi, Kenya.",
   keywords: [
+    "Musa Muthami",
     "Musa Mwange",
-    "Cybersecurity Specialist",
-    "Frontend Developer",
+    "Software Developer",
+    "Cybersecurity Enthusiast",
+    "Full-Stack Developer",
     "Penetration Testing",
     "Vulnerability Assessment",
     "React Developer",
@@ -60,24 +62,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Musa Mwange",
+      name: "Musa Muthami",
       url: "https://github.com/MuthamiM",
     },
   ],
-  creator: "Musa Mwange",
-  publisher: "Musa Mwange",
+  creator: "Musa Muthami",
+  publisher: "Musa Muthami",
 
   openGraph: {
-    title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer Portfolio",
-    description: "Musa Mwange - Cybersecurity Specialist & Frontend Developer",
+    title: "Musa Muthami | Software Developer & Cybersecurity Enthusiast",
+    description: "Musa Muthami — Software Developer & Cybersecurity Enthusiast building secure systems in Nairobi, Kenya.",
     url: "https://musamuthami1-github-io.pages.dev",
-    siteName: "Musa Mwange",
+    siteName: "Musa Muthami",
     images: [
       {
         url: "https://musamuthami1-github-io.pages.dev/images/profile.JPG",
         width: 1200,
         height: 630,
-        alt: "Musa Mwange Portfolio",
+        alt: "Musa Muthami Portfolio",
       },
     ],
     locale: "en_US",
@@ -86,8 +88,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Musa Mwange | Cybersecurity Specialist & Frontend Developer Portfolio",
-    description: "Musa Mwange - Cybersecurity Specialist & Frontend Developer",
+    title: "Musa Muthami | Software Developer & Cybersecurity Enthusiast",
+    description: "Musa Muthami — Software Developer & Cybersecurity Enthusiast building secure systems in Nairobi, Kenya.",
     images: ["https://musamuthami1-github-io.pages.dev/images/profile.JPG"],
     creator: "@SkiNnyWallk",
   },

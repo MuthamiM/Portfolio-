@@ -30,7 +30,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center h-full w-full p-2.5 pl-4 md:p-8"
+      className="flex flex-col items-center justify-center min-h-full w-full py-8 md:py-12 p-2.5 pl-4 md:p-8"
       suppressHydrationWarning
     >
       <div className="w-full mx-auto max-w-3xl text-center space-y-4 md:space-y-6 " suppressHydrationWarning>

@@ -46,23 +46,23 @@ const Controller = ({ activeSection = "meet-me", onSectionChange }: Props) => {
   const buttons = ["MEET ME", "SKILLS", "MY WORK", "SOCIALS"];
 
   return (
-    <div className="flex flex-col items-center md:items-start justify-center w-full h-full p-3 md:p-4 gap-2 md:gap-0 3xl:gap-4" suppressHydrationWarning>
+    <div className="flex flex-col items-center md:items-start justify-center w-full h-auto md:h-full p-3 md:p-4 gap-2 md:gap-0 3xl:gap-4" suppressHydrationWarning>
       <div className="flex items-center md:flex-col md:items-start w-full">
         {(screenWidth < 823 || screenWidth > 825) && (
           <Image
             width={40}
             height={40}
             src="/profilePic.jpg"
-            alt="Musa Mwange"
+            alt="Musa Muthami"
             className={`w-17 h-17 2xl:w-20 2xl:h-20 rounded-2xl object-cover md:mb-3 border-[0.095rem] ${borderClass}`}
           />
         )}
         <div className="flex flex-col items-start ml-4 md:ml-0">
           <h2 className="text-lg md:text-xl 2xl:text-2xl font-semibold tracking-widest">
-            MUSA MWANGE
+            MUSA MUTHAMI
           </h2>
           <p className="text-sm xl:text-xs 2xl:text-base font-semibold text-gray-400">
-            Cybersecurity & Web Dev
+            Software Dev & Cybersecurity
           </p>
         </div>
       </div>
