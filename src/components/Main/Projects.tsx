@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { projects } from "@/data/data";
@@ -10,6 +10,22 @@ const Projects = () => {
   const { theme } = useTheme();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeImageIndexes, setActiveImageIndexes] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImageIndexes((prev) => {
+        const next = { ...prev };
+        projects.forEach((project) => {
+          if (project.images.length > 1) {
+            const currentIdx = prev[project.name] ?? 0;
+            next[project.name] = (currentIdx + 1) % project.images.length;
+          }
+        });
+        return next;
+      });
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const getStatusColor = (status: string) => {
     switch (status) {

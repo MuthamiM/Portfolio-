@@ -1,8 +1,72 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { newsArticles } from "@/data/news";
+import { newsArticles, NewsArticle } from "@/data/news";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+
+const FEEDS = [
+  { name: "TechCrunch", url: "https://techcrunch.com/feed/" },
+  { name: "Techweez", url: "https://techweez.com/feed/" },
+  { name: "Techpoint Africa", url: "https://techpoint.africa/feed/" },
+  { name: "Gadgets Africa", url: "https://gadgetsafrica.com/feed/" }
+];
+
+async function fetchRealTimeNews(): Promise<NewsArticle[]> {
+  const allArticles: NewsArticle[] = [];
+  
+  await Promise.all(
+    FEEDS.map(async (feed) => {
+      try {
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(feed.url)}&timestamp=${Date.now()}`;
+        const res = await fetch(proxyUrl);
+        if (!res.ok) return;
+        const data = await res.json();
+        const xmlText = data.contents;
+        if (!xmlText) return;
+        
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+        const items = xmlDoc.querySelectorAll("item");
+        
+        items.forEach((item, index) => {
+          if (index >= 5) return; // limit to 5 per feed
+          
+          const title = item.querySelector("title")?.textContent || "";
+          const link = item.querySelector("link")?.textContent || "";
+          const pubDateStr = item.querySelector("pubDate")?.textContent || "";
+          const descriptionRaw = item.querySelector("description")?.textContent || "";
+          
+          // Clean HTML from description
+          const content = descriptionRaw.replace(/<[^>]*>/g, "").trim();
+          
+          if (title && link) {
+            allArticles.push({
+              id: `${feed.name.toLowerCase().replace(/\s+/g, "-")}-${index}-${Date.parse(pubDateStr) || index}`,
+              title,
+              source: feed.name,
+              date: pubDateStr ? new Date(pubDateStr).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+              }) : "Recent",
+              content: content.slice(0, 300) + (content.length > 300 ? "..." : ""),
+              link
+            });
+          }
+        });
+      } catch (err) {
+        console.error(`Failed to fetch feed ${feed.name}:`, err);
+      }
+    })
+  );
+  
+  // Sort articles by date descending
+  return allArticles.sort((a, b) => {
+    const timeA = new Date(a.date).getTime() || 0;
+    const timeB = new Date(b.date).getTime() || 0;
+    return timeB - timeA;
+  });
+}
 
 interface NewsBannerProps {
   onVisibilityChange?: (visible: boolean) => void;
@@ -15,6 +79,25 @@ export default function NewsBanner({ onVisibilityChange }: NewsBannerProps) {
   const [isBlogOpen, setIsBlogOpen] = useState(false);
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
   const { theme } = useTheme();
+  const [articles, setArticles] = useState<NewsArticle[]>(newsArticles);
+
+  // Load real-time news from RSS feeds
+  useEffect(() => {
+    let active = true;
+    async function loadNews() {
+      const liveArticles = await fetchRealTimeNews();
+      if (liveArticles.length > 0 && active) {
+        setArticles(liveArticles);
+        setCurrentArticleIndex(0);
+      }
+    }
+    loadNews();
+    const interval = setInterval(loadNews, 60000); // refresh every minute
+    return () => {
+      active = false;
+      clearInterval(interval);
+    };
+  }, []);
 
   const closeTimerRef = React.useRef<NodeJS.Timeout | null>(null);
 
@@ -67,12 +150,12 @@ export default function NewsBanner({ onVisibilityChange }: NewsBannerProps) {
 
   // Rotate through articles
   useEffect(() => {
-    if (!isVisible || isBlogOpen) return;
+    if (!isVisible || isBlogOpen || articles.length === 0) return;
     const interval = setInterval(() => {
-      setCurrentArticleIndex((prev) => (prev + 1) % newsArticles.length);
+      setCurrentArticleIndex((prev) => (prev + 1) % articles.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [isVisible, isBlogOpen]);
+  }, [isVisible, isBlogOpen, articles.length]);
 
   const handleClose = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -95,7 +178,7 @@ export default function NewsBanner({ onVisibilityChange }: NewsBannerProps) {
 
   if (!isVisible) return null;
 
-  const currentArticle = newsArticles[currentArticleIndex];
+  const currentArticle = articles[currentArticleIndex] || articles[0] || newsArticles[0];
 
   return (
     <>
@@ -248,7 +331,7 @@ export default function NewsBanner({ onVisibilityChange }: NewsBannerProps) {
 
               {/* News Feed Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {newsArticles.map((article) => {
+                {articles.map((article) => {
                   const isExpanded = selectedArticleId === article.id;
                   return (
                     <div
